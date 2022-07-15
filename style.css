@@ -1,0 +1,156 @@
+body{
+    background-color: hsl(27, 66%, 92%);
+}
+
+.container{
+    width: 30%;
+    margin: 5% auto;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.top{
+    background-color: hsl(10, 79%, 65%);
+    color: hsl(33, 100%, 98%);
+    border-radius: 10px;
+    padding: 2% 5%;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: 1fr;
+}
+
+.top p{
+    grid-column: 1/2;
+    margin-bottom: 0; 
+}
+
+.top h2{
+    grid-column: 1/2;
+    margin-top: 2%;
+}
+
+.top img{
+   margin-top: -10%;
+   margin-left: 40%;
+}
+
+.bottom{
+    margin-top: 5%;
+    background-color:hsl(33, 100%, 98%);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.bottom h2{
+    color: hsl(25, 47%, 15%);
+}
+
+.chart-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12em;
+    gap: 0.5em;
+}
+
+.chart-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 2.5em;
+    height: 90%;
+}
+
+.chart-value{
+    height: var(--height);
+    background: hsl(10, 79%, 65%);
+    width: 100%;
+    border-radius: 0.25em;
+}
+
+.higher{
+    background-color: hsl(186, 34%, 60%);
+}
+
+.chart-title{
+    color: hsl(28, 10%, 53%);
+    font-size: 0.8em;
+}
+
+.chart-active{
+    position: relative;
+    bottom: var(--mb);
+    color: white;
+    background-color: hsla(25, 47%, 15%, 0.9);
+    padding: 1%;
+    border-radius: 5px;
+    display: none;
+}
+
+.chart-value:hover {
+    margin-bottom: -49%;
+    opacity: 0.8;
+}
+
+.chart-value:hover + .chart-active{
+    display: block;
+}
+
+hr{
+    border: 1px solid hsl(27, 66%, 92%); 
+    background-color: hsl(27, 66%, 92%);
+}
+
+.underline{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+#total{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    color: hsl(28, 10%, 53%);
+    margin-bottom: 0;
+}
+
+.underline h1{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    color: hsl(25, 47%, 15%);
+    margin-top: 2%;
+}
+
+.underline h4{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    color: hsl(25, 47%, 15%);
+    margin-top: 5%;
+    margin-left: 80%;
+    font-size: 13px;
+}
+
+#last{
+    grid-row: 2/3;
+    grid-column: 2/3; 
+    color: hsl(28, 10%, 53%);
+    font-size: 13px;
+    margin-top: 15%;
+    margin-left: 50%;
+}
+
+@media screen and (max-width:375px) {
+    .container{
+        width: 90%;
+    }
+
+    #last{
+        margin-left: 42%;
+    }
+}
